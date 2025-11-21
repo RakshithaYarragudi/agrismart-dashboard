@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 40 20% 97%;
+    --foreground: 150 30% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 150 30% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 150 30% 15%;
+
+    --primary: 145 65% 35%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 75 50% 92%;
+    --secondary-foreground: 150 30% 15%;
+
+    --muted: 40 20% 94%;
+    --muted-foreground: 150 15% 45%;
+
+    --accent: 80 70% 55%;
+    --accent-foreground: 150 30% 15%;
+
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 145 65% 45%;
+    --warning: 40 95% 55%;
+    --info: 200 80% 50%;
+
+    --border: 40 20% 88%;
+    --input: 40 20% 90%;
+    --ring: 145 65% 35%;
+
+    --radius: 0.75rem;
+
+    --chart-1: 145 65% 40%;
+    --chart-2: 80 70% 50%;
+    --chart-3: 40 95% 60%;
+    --chart-4: 200 70% 50%;
+    --chart-5: 280 60% 55%;
+  }
+
+  .dark {
+    --background: 150 20% 8%;
+    --foreground: 40 20% 95%;
+
+    --card: 150 15% 12%;
+    --card-foreground: 40 20% 95%;
+
+    --popover: 150 15% 12%;
+    --popover-foreground: 40 20% 95%;
+
+    --primary: 145 60% 45%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 150 15% 18%;
+    --secondary-foreground: 40 20% 95%;
+
+    --muted: 150 15% 16%;
+    --muted-foreground: 40 15% 65%;
+
+    --accent: 80 65% 50%;
+    --accent-foreground: 150 30% 15%;
+
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 145 60% 50%;
+    --warning: 40 90% 60%;
+    --info: 200 75% 55%;
+
+    --border: 150 15% 20%;
+    --input: 150 15% 20%;
+    --ring: 145 60% 45%;
+
+    --chart-1: 145 60% 45%;
+    --chart-2: 80 65% 55%;
+    --chart-3: 40 90% 65%;
+    --chart-4: 200 70% 55%;
+    --chart-5: 280 55% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+}
+
+@layer utilities {
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+  }
+
+  .status-success {
+    @apply bg-success/10 text-success border-success/20;
+  }
+
+  .status-warning {
+    @apply bg-warning/10 text-warning border-warning/20;
+  }
+
+  .status-danger {
+    @apply bg-destructive/10 text-destructive border-destructive/20;
+  }
+
+  .status-info {
+    @apply bg-info/10 text-info border-info/20;
+  }
+}
